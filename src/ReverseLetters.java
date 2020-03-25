@@ -1,3 +1,6 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 import java.util.Stack;
 
 public class ReverseLetters {
@@ -53,9 +56,18 @@ public class ReverseLetters {
         return false;
     }
 
-    public static void main(String[] args) {
-        String input = "ab-cd";
-        input = reverseOnlyLetters2(input);
-        System.out.println(input);
+    @Test
+    void Test1() {
+        String in = "ab-cd-";
+        String rev = reverseOnlyLetters(in);
+        Assertions.assertEquals("ba-dc-", rev);
+
+    }
+
+    @Test
+    void Test2() {
+        String in = "abc-de-";
+        String rev = "edc-ba-";
+        Assertions.assertEquals(rev, reverseOnlyLetters2(in));
     }
 }
