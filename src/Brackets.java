@@ -56,5 +56,9 @@ public class Brackets {
     public static void main(String[] args) {
         String input = "(12((34)(56))))";
         System.out.println(bracket(input));
+        input = "))((123((";
+        System.out.println(bracket(input));
+        input = "23";
+        System.out.println(bracket(input));
     }
 }
